@@ -20,9 +20,7 @@ msgstr ""
 "<a href=\"http://freifunk.net/wie-mache-ich-mit/community-finden/\">Community finden</a> "
 "nach der richtigen Firmware. Wir behalten uns ausdrücklich vor, Knoten mit "
 "inkorrekten Angaben vom Netzbetrieb über die VPN-Gateways zu sperren.</p>"
-"<p>Die Angabe einer E-Mail Adresse ist erforderlich. Dies dient nicht der "
-"Identifikation, sondern nur der Kontaktaufnahme bei Problemen. Ein anonymes "
-"E-Mail Postfach kann man zum Beispiel bei <a href=\"http://posteo.de/\">posteo.de</a> erwerben.</p>"
+
 
 msgid "gluon-config-mode:pubkey"
 msgstr ""

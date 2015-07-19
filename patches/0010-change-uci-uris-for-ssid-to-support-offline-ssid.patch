@@ -1,0 +1,14 @@
+diff --git a/package/gluon-mesh-batman-adv-core/files/lib/gluon/upgrade/320-gluon-mesh-batman-adv-core-wireless b/package/gluon-mesh-batman-adv-core/files/lib/gluon/upgrade/320-gluon-mesh-batman-adv-core-wireless
+index 50753c8..f71248e 100755
+--- a/package/gluon-mesh-batman-adv-core/files/lib/gluon/upgrade/320-gluon-mesh-batman-adv-core-wireless
++++ b/package/gluon-mesh-batman-adv-core/files/lib/gluon/upgrade/320-gluon-mesh-batman-adv-core-wireless
+@@ -45,7 +45,8 @@ local function configure_radio(radio, index, config)
+ 		device = radio,
+ 		network = 'client',
+ 		mode = 'ap',
+-		ssid = config.ssid,
++		ssid = 'Freifunk-Node startet...',
++		ssid_online = config.ssid,
+ 		macaddr = util.generate_mac(2, index),
+ 		ifname = client_ifname,
+ 		disabled = disable_state_client and 1 or 0,

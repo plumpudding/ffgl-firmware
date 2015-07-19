@@ -1,0 +1,7 @@
+GLUON_SITE_FEEDS='offlinessid ffpb'
+
+PACKAGES_OFFLINESSID_REPO=https://github.com/FF-NRW/offline-ssid.git
+PACKAGES_OFFLINESSID_COMMIT=84255e76b05493b9021b72d046c8ef4d916365f8
+
+PACKAGES_FFPB_REPO=http://git.c3pb.de/freifunk-pb/ffpb-packages.git
+PACKAGES_FFPB_COMMIT=95e6b846c5d57b5b66cdf4de49da00eb58647cf6

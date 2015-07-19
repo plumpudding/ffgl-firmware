@@ -1,0 +1,164 @@
+diff --git a/package/gluon-config-mode-contact-info/files/lib/gluon/config-mode/wizard/0500-contact-info.lua b/package/gluon-config-mode-contact-info/files/lib/gluon/config-mode/wizard/0500-contact-info.lua
+index a2182f9..09f0051 100644
+--- a/package/gluon-config-mode-contact-info/files/lib/gluon/config-mode/wizard/0500-contact-info.lua
++++ b/package/gluon-config-mode-contact-info/files/lib/gluon/config-mode/wizard/0500-contact-info.lua
+@@ -6,10 +6,13 @@ local M = {}
+ 
+ function M.section(form)
+   local s = form:section(cbi.SimpleSection, nil, i18n.translate(
+-    'You can provide your contact information here to '
++    '<p>You can provide your contact information here to '
+       .. 'allow others to contact you. Please note that '
+       .. 'this information will be visible <em>publicly</em> '
+-      .. 'on the internet together with your node\'s coordinates.'
++      .. 'on the internet together with your node\'s coordinates.</p>'
++      .. '<p>An e-mail address is necessary to contact you in case of problems. '
++      .. 'You can remain anonymous by using an e-mail address from websites such as '
++      .. '<a href=\"http://posteo.de/\">posteo.de</a>.</p>'
+     )
+   )
+ 
+@@ -17,7 +20,7 @@ function M.section(form)
+   o.default = uci:get_first("gluon-node-info", "owner", "contact", "")
+   o.rmempty = true
+   o.datatype = "string"
+-  o.description = i18n.translate("e.g. E-mail or phone number")
++  o.description = i18n.translate("E-mail or similar")
+   o.maxlen = 140
+ end
+ 
+diff --git a/package/gluon-config-mode-contact-info/i18n/de.po b/package/gluon-config-mode-contact-info/i18n/de.po
+index 719246f..66fc799 100644
+--- a/package/gluon-config-mode-contact-info/i18n/de.po
++++ b/package/gluon-config-mode-contact-info/i18n/de.po
+@@ -14,14 +14,20 @@ msgid "Contact info"
+ msgstr "Kontakt"
+ 
+ msgid ""
+-"You can provide your contact information here to allow others to contact "
++"<p>You can provide your contact information here to allow others to contact "
+ "you. Please note that this information will be visible <em>publicly</em> on "
+-"the internet together with your node's coordinates."
++"the internet together with your node's coordinates.</p>"
++"<p>An e-mail address is necessary to contact you in case of problems. "
++"You can remain anonymous by using an e-mail address from websites such as "
++"<a href=\"http://posteo.de/\">posteo.de</a>.</p>"
+ msgstr ""
+-"Hier kannst du einen <em>öffentlichen</em> Hinweis hinterlegen, um anderen "
++"<p>Hier kannst du einen <em>öffentlichen</em> Hinweis hinterlegen, um anderen "
+ "zu ermöglichen, Kontakt mit dir aufzunehmen. Bitte beachte, dass "
+ "dieser Hinweis auch öffentlich im Internet, zusammen mit den Koordinaten "
+-"deines Knotens, einsehbar sein wird."
++"deines Knotens, einsehbar sein wird.</p>"
++"<p>Die Angabe einer E-Mail Adresse ist erforderlich. Dies dient nicht der "
++"Identifikation, sondern nur der Kontaktaufnahme bei Problemen. Ein anonymes "
++"E-Mail Postfach kann man zum Beispiel bei <a href=\"http://posteo.de/\">posteo.de</a> erwerben.</p>"
+ 
+-msgid "e.g. E-mail or phone number"
+-msgstr "z.B. E-Mail oder Telefonnummer"
++msgid "E-mail or similar"
++msgstr "E-Mail oder Ähnliches"
+diff --git a/package/gluon-config-mode-contact-info/i18n/gluon-config-mode-contact-info.pot b/package/gluon-config-mode-contact-info/i18n/gluon-config-mode-contact-info.pot
+index 63939a8..aa33eb3 100644
+--- a/package/gluon-config-mode-contact-info/i18n/gluon-config-mode-contact-info.pot
++++ b/package/gluon-config-mode-contact-info/i18n/gluon-config-mode-contact-info.pot
+@@ -5,10 +5,13 @@ msgid "Contact info"
+ msgstr ""
+ 
+ msgid ""
+-"You can provide your contact information here to allow others to contact "
++"<p>You can provide your contact information here to allow others to contact "
+ "you. Please note that this information will be visible <em>publicly</em> on "
+-"the internet together with your node's coordinates."
++"the internet together with your node's coordinates.</p>"
++"<p>An e-mail address is necessary to contact you in case of problems. "
++"You can remain anonymous by using an e-mail address from websites such as "
++"<a href=\"http://posteo.de/\">posteo.de</a>.</p>"
+ msgstr ""
+ 
+-msgid "e.g. E-mail or phone number"
++msgid "E-mail or similar"
+ msgstr ""
+diff --git a/package/gluon-config-mode-geo-location/files/lib/gluon/config-mode/wizard/0400-geo-location.lua b/package/gluon-config-mode-geo-location/files/lib/gluon/config-mode/wizard/0400-geo-location.lua
+index a3ac089..7af1afc 100644
+--- a/package/gluon-config-mode-geo-location/files/lib/gluon/config-mode/wizard/0400-geo-location.lua
++++ b/package/gluon-config-mode-geo-location/files/lib/gluon/config-mode/wizard/0400-geo-location.lua
+@@ -8,7 +8,7 @@ function M.section(form)
+   local s = form:section(cbi.SimpleSection, nil, i18n.translate(
+     'If you want the location of your node to be displayed on the map, '
+       .. 'you can enter its coordinates here. Specifying the altitude '
+-      .. 'is optional and should only be done if a proper value is known.'))
++      .. 'is optional.'))
+ 
+ 
+   local o
+@@ -31,12 +31,12 @@ function M.section(form)
+   o.datatype = "float"
+   o.description = i18n.translatef("e.g. %s", "10.689901")
+ 
+-  o = s:option(cbi.Value, "_altitude", i18n.translate("Altitude"))
++  o = s:option(cbi.Value, "_altitude", i18n.translate("Height above ground"))
+   o.default = uci:get_first("gluon-node-info", "location", "altitude")
+   o:depends("_location", "1")
+   o.rmempty = true
+   o.datatype = "float"
+-  o.description = i18n.translatef("e.g. %s", "11.51")
++  o.description = i18n.translatef("e.g. %s", "5.5")
+ 
+ end
+ 
+diff --git a/package/gluon-config-mode-geo-location/i18n/de.po b/package/gluon-config-mode-geo-location/i18n/de.po
+index e83443d..fc2cfc1 100644
+--- a/package/gluon-config-mode-geo-location/i18n/de.po
++++ b/package/gluon-config-mode-geo-location/i18n/de.po
+@@ -12,13 +12,11 @@ msgstr ""
+ 
+ msgid ""
+ "If you want the location of your node to be displayed on the map, you can "
+-"enter its coordinates here. Specifying the altitude is optional and should "
+-"only be done if a proper value is known."
++"enter its coordinates here. Specifying the altitude is optional."
+ msgstr ""
+ "Um deinen Knoten auf der Karte anzeigen zu können, benötigen wir seine "
+-"Koordinaten. Hier hast du die Möglichkeit, diese zu hinterlegen. Die "
+-"Höhenangabe ist optional und sollte nur gesetzt werden, wenn ein exakter "
+-"Wert bekannt ist."
++"Koordinaten. Hier hast du die Möglichkeit, diese zu hinterlegen. "
++"Die Höhenangabe ist optional."
+ 
+ msgid "Latitude"
+ msgstr "Breitengrad"
+@@ -26,8 +24,8 @@ msgstr "Breitengrad"
+ msgid "Longitude"
+ msgstr "Längengrad"
+ 
+-msgid "Altitude"
+-msgstr "Höhenmeter über Normalnull"
++msgid "Height above ground"
++msgstr "Höhe über Grund"
+ 
+ msgid "Show node on the map"
+ msgstr "Knoten auf der Karte anzeigen"
+diff --git a/package/gluon-config-mode-geo-location/i18n/gluon-config-mode-geo-location.pot b/package/gluon-config-mode-geo-location/i18n/gluon-config-mode-geo-location.pot
+index a2be4fd..5253f7e 100644
+--- a/package/gluon-config-mode-geo-location/i18n/gluon-config-mode-geo-location.pot
++++ b/package/gluon-config-mode-geo-location/i18n/gluon-config-mode-geo-location.pot
+@@ -3,8 +3,7 @@ msgstr "Content-Type: text/plain; charset=UTF-8"
+ 
+ msgid ""
+ "If you want the location of your node to be displayed on the map, you can "
+-"enter its coordinates here. Specifying the altitude is optional and should "
+-"only be done if a proper value is known."
++"enter its coordinates here. Specifying the altitude is optional."
+ msgstr ""
+ 
+ msgid "Latitude"
+@@ -13,7 +12,7 @@ msgstr ""
+ msgid "Longitude"
+ msgstr ""
+ 
+-msgid "Altitude"
++msgid "Height above ground"
+ msgstr ""
+ 
+ msgid "Show node on the map"

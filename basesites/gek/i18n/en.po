@@ -15,13 +15,11 @@ msgstr ""
 "<p>Welcome the the setup wizard of your new Freifunk Duckburg node. "
 "Please fill out the following form and transmit it."
 "<p>Only use this firmware to operate a Freifunk node in Gelsenkirchen. "
-"Otherwise take a look at look for the proper firmware
+"Otherwise take a look at look for the proper firmware "
 "<a href=\"http://freifunk.net/en/how-to-join/find-your-nearest-community/\">the community finder</a> "
 "and download the proper firmware for your city. The server administrators "
 "explicitly reserve the option to ban nodes with fake or missing data. </p>"
-"<p>An e-mail address is necessary to contact you in case of problems. "
-"You can remain anonymous by using an e-mail address from websites such as "
-"<a href=\"http://posteo.de/\">posteo.de</a>.</p>"
+
 
 msgid "gluon-config-mode:pubkey"
 msgstr ""

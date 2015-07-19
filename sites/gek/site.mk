@@ -1,4 +1,5 @@
 GLUON_SITE_PACKAGES := \
+	ffpb-ebtables-net-rules \
 	gluon-mesh-batman-adv-15 \
 	gluon-alfred \
 	gluon-announced \
@@ -11,6 +12,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-contact-info \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
+	gluon-offline-ssid \
 	gluon-luci-admin \
 	gluon-luci-autoupdater \
 	gluon-luci-portconfig \
@@ -28,7 +30,7 @@ GLUON_SITE_PACKAGES := \
 	nano
 
 
-DEFAULT_GLUON_RELEASE := $(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := $(shell date '+%Y%m%d')-exp
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
