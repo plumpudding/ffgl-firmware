@@ -1,6 +1,6 @@
 GLUON_SITE_PACKAGES := \
-	ffpb-ebtables-net-rules \
 	gluon-mesh-batman-adv-15 \
+	ffpb-ebtables-net-rules \
 	gluon-alfred \
 	gluon-announced \
 	gluon-autoupdater \
@@ -12,7 +12,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-contact-info \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
-	gluon-offline-ssid \
 	gluon-luci-admin \
 	gluon-luci-autoupdater \
 	gluon-luci-portconfig \

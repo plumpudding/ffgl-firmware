@@ -8,7 +8,7 @@ SITES="gek"
 #SITES="bcd bgl cgr kut lgn lln ode ovr rrh"
 #ARCHS="ar71xx-generic"
 ARCHS="ar71xx-generic ar71xx-nand mpc85xx-generic x86-kvm_guest x86-generic"
-BRANCH="experimental"
+BRANCH="stable"
 
 ##########################################################
 
@@ -66,7 +66,7 @@ function images {
 #			make clean $ARGS
 			make -j20 BROKEN=1 $ARGS
 		done
-#		make manifest $ARGS
+		make manifest $ARGS
 #		contrib/sign.sh $SCRIPTHOME/secret.key $SCRIPTHOME/images/$f/$BRANCH/sysupgrade/$BRANCH.manifest
 	done
 }

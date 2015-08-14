@@ -1,0 +1,91 @@
+gl0
+Secret: 70f49f2a3e27d7668a71c4d650c0d8d8eeb170f31b486dd230458162329d2b46
+Public: 6082fc3103bc323e5b1ee34a69b76fac34e17778939d7b8e3de2bbdc3d81cb5a
+gl1
+Secret: 707007ed500ede36bdf174a817b9b804e587d388baf46320461e4c09e6ee977f
+Public: f207f58b51ec694aa355d589a2f4c3828e6a273f3cd617e56c28fa6e3f142097
+gl2
+Secret: b86532733fe3277abb3009ee40b36643a3b2bd19c0fbf2f6d1b1c6756181de6c
+Public: ce12f4834c95a42e43b7a64cedbee96f97cdf3cc87dd588a3082d00ccb8f5322
+gl3
+Secret: 8064b03562efe9f56be27b73e91ddb91d378f2ff1e1c602946a4b5ae3fb03876
+Public: b48730579d9794c72654994f887376e61636c55da611b28c679c0fb9fc79da7f
+gl4
+Secret: 709073d1eb843a1811ae2ebced974797dfebce6829a9b1d48598e43cf657a273
+Public: b95a530c7a517e8da39cdadf168880e0a4a708db5133dd52043776de23d40b51
+gl5
+Secret: 88e6b36b12d60ba79c42f57a92ece7ad193e2410f8806be34be29fa46352fa70
+Public: 091ca87f7b1d1a945fb5e9bbb050b3512b26e9999a2616815a68c1ea7873d9d7
+gl6
+Secret: 50c16199ea619f0720d0ceb4c06308bd40874bc9875380875577fc2e28f43662
+Public: e6f6e1b6814c741036060001988a9ad0f692fa1985448bfffae01f6bfb7dd0c2
+gl7
+Secret: 8857eb2e11d1577aa7288822d4e0bf6f1e71d42f23f92891728602c365caa47f
+Public: 5f813152bb9e6a6e4f8a55cbfaca84b8a85cd600d98e3b158ed7660d9cfcd456
+gl8
+Secret: 0882081cdfbe7fb6fd47ae97ba50762f16370338a690d7cd22f52263b84cc444
+Public: 515801142dc476f966ed5ebd909e0117f9e48f62eb38e372a696ca3ed41399d3
+gl9
+Secret: 1891267a44b81b92ed6c88dc0a645f1a94733d8abcaedd4bb9ec2e6cafe2a347
+Public: 8427c40528ba64855376792f059a689c7227fb5671aa8431422308f3c8544328
+
+gl0 = {
+	key = '6082fc3103bc323e5b1ee34a69b76fac34e17778939d7b8e3de2bbdc3d81cb5a',
+	remotes = {
+		'"gl0.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl1 = {
+	key = 'f207f58b51ec694aa355d589a2f4c3828e6a273f3cd617e56c28fa6e3f142097',
+	remotes = {
+		'"gl1.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl2 = {
+	key = 'ce12f4834c95a42e43b7a64cedbee96f97cdf3cc87dd588a3082d00ccb8f5322',
+	remotes = {
+		'"gl2.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl3 = {
+	key = 'b48730579d9794c72654994f887376e61636c55da611b28c679c0fb9fc79da7f',
+	remotes = {
+		'"gl3.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl4 = {
+	key = 'b95a530c7a517e8da39cdadf168880e0a4a708db5133dd52043776de23d40b51',
+	remotes = {
+		'"gl4.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl5 = {
+	key = '091ca87f7b1d1a945fb5e9bbb050b3512b26e9999a2616815a68c1ea7873d9d7',
+	remotes = {
+		'"gl5.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl6 = {
+	key = 'e6f6e1b6814c741036060001988a9ad0f692fa1985448bfffae01f6bfb7dd0c2',
+	remotes = {
+		'"gl6.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl7 = {
+	key = '5f813152bb9e6a6e4f8a55cbfaca84b8a85cd600d98e3b158ed7660d9cfcd456',
+	remotes = {
+		'"gl7.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl8 = {
+	key = '515801142dc476f966ed5ebd909e0117f9e48f62eb38e372a696ca3ed41399d3',
+	remotes = {
+		'"gl8.gl.wupper.ffrl.de" port 51399',
+	},
+},
+gl9 = {
+	key = '8427c40528ba64855376792f059a689c7227fb5671aa8431422308f3c8544328',
+	remotes = {
+		'"gl9.gl.wupper.ffrl.de" port 51399',
+	},
+},

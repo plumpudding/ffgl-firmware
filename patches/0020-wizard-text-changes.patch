@@ -108,7 +108,7 @@ index a3ac089..7af1afc 100644
  end
  
 diff --git a/package/gluon-config-mode-geo-location/i18n/de.po b/package/gluon-config-mode-geo-location/i18n/de.po
-index e83443d..fc2cfc1 100644
+index a2850d5..fc2cfc1 100644
 --- a/package/gluon-config-mode-geo-location/i18n/de.po
 +++ b/package/gluon-config-mode-geo-location/i18n/de.po
 @@ -12,13 +12,11 @@ msgstr ""
@@ -133,7 +133,7 @@ index e83443d..fc2cfc1 100644
  msgstr "Längengrad"
  
 -msgid "Altitude"
--msgstr "Höhenmeter über Normalnull"
+-msgstr "Höhe"
 +msgid "Height above ground"
 +msgstr "Höhe über Grund"
  
@@ -162,3 +162,4 @@ index a2be4fd..5253f7e 100644
  msgstr ""
  
  msgid "Show node on the map"
+
