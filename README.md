@@ -5,3 +5,5 @@ first run init.sh
 then create the base site configs in basesites/ or change the existing ones to fit your needs
 edit build.sh and select your your communities
 finally run build.sh
+
+#To be replaced with https://github.com/eulenfunk/firmware 
